@@ -12,6 +12,7 @@
   "dependencies": {
     "lodash": "^4.17.15",
     "minimist": "^1.2.0",
-    "rhea": "^1.0.10"
+    "rhea": "^1.0.20",
+    "runsa-rhea": "^1.0.20"
   }
 }

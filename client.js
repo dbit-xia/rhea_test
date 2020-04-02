@@ -1,9 +1,9 @@
 'use strict';
-var container = require('rhea');
+var container = require('runsa-rhea');
 const _ = require('lodash');
 
 var args = {
-    hosts: ['localhost', 'localhost'],
+    hosts: ['localhost', '192.168.14.105'],
     ports: [15672,5672]
 };
 
@@ -21,9 +21,10 @@ var connect_options = {
         attempt++;
         return details;
     },
-    // username: 'test',
-    // password: '123456',
-    // non_fatal_errors:['ECONNREFUSED']
+    username: 'admin',
+    password: process.env.MQ_PASSWORD,
+    // idle_time_out:50 * 1000
+    //non_fatal_errors:['ECONNREFUSED']
 
 };
 connect_options.reconnect =function() {
@@ -58,6 +59,14 @@ function addReceiver(){
         console.warn('receiver_open OK');  //not print this line
     });
 }
+function addSender(){
+    if (sender) return ;
+    console.log('start open_sender...');
+    sender = connection.open_sender('examples');
+    sender.on('sendable', () => {
+        console.warn('sendable OK');  //not print this line
+    });
+}
 // addReceiver();
 
 connection.on('disconnected', function (context) {
@@ -67,7 +76,8 @@ connection.on('disconnected', function (context) {
 
     if (reconnecting) {
         // setTimeout(() => {
-        addReceiver();
+        // addReceiver();
+        addSender()
         // }, 1000); //wait 1second can success
     }
 });

@@ -3,8 +3,8 @@ var container = require('runsa-rhea');
 const _ = require('lodash');
 
 var args = {
-    hosts: ['localhost', '192.168.14.105'],
-    ports: [15672,5672]
+    hosts: ['amqp01.nr01.runsasoft.com', '192.168.14.105'],
+    ports: [56233,5672]
 };
 
 var sender;
@@ -58,12 +58,16 @@ function addReceiver(){
     receiver.on('receiver_open', () => {
         console.warn('receiver_open OK');  //not print this line
     });
+    receiver.on('message',()=>{
+        console.log('收到消息');
+    })
 }
 function addSender(){
     if (sender) return ;
     console.log('start open_sender...');
     sender = connection.open_sender('examples');
     sender.on('sendable', () => {
+        sender.send("123");
         console.warn('sendable OK');  //not print this line
     });
 }
@@ -74,15 +78,17 @@ connection.on('disconnected', function (context) {
     let {reconnecting,error} = context; //
     console.error(String(attempt),new Date().toString(),'artemis:connection.disconnected:', (error && error.message || error), (reconnecting ? ',reconnecting...' : ''));
 
-    if (reconnecting) {
-        // setTimeout(() => {
-        // addReceiver();
-        addSender()
-        // }, 1000); //wait 1second can success
-    }
+    // if (reconnecting) {
+    //     // setTimeout(() => {
+    //     // addReceiver();
+    //     addSender()
+    //     // }, 1000); //wait 1second can success
+    // }
 });
 
 connection.connect();
+addReceiver();
+addSender();
 
-console.warn('test 15672-->fail, 5672-->success');
+// console.warn('test 15672-->fail, 5672-->success');
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7690bb9-a059-4c99-91a7-a5709274cd5d" name="Default Changelist" comment="">
+    <list default="true" id="c7690bb9-a059-4c99-91a7-a5709274cd5d" name="Default Changelist" comment="test rhea">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/client.js" afterDir="false" />
     </list>
@@ -12,17 +12,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="20" />
-    <option name="width" value="1316" />
+    <option name="width" value="1356" />
     <option name="height" value="721" />
   </component>
-  <component name="ProjectId" id="1hbC6J7SR1paNCXItjZhIKKFrFu" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="false" id="Update" />
-  </component>
+  <component name="ProjectId" id="1haCU8sh97C8bcGqfyyckVMm07O" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -36,19 +32,16 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RunManager">
-    <configuration name="client.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="client.js" working-dir="$PROJECT_DIR$">
+    <configuration name="client.js" type="NodeJSConfigurationType" path-to-node="$USER_HOME$/.tnvm/versions/node/v8.15.1/bin/node" nameIsGenerated="true" path-to-js-file="client.js" working-dir="$PROJECT_DIR$">
       <envs>
+        <env name="DEBUG" value="" />
         <env name="MQ_PASSWORD" value="admin&amp;123*&amp;" />
       </envs>
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Node.js.client.js" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -60,8 +53,37 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571752211839</updated>
-      <workItem from="1571752213020" duration="1495000" />
+      <workItem from="1571752213020" duration="2440000" />
+      <workItem from="1571994678935" duration="1437000" />
+      <workItem from="1572010489754" duration="236000" />
+      <workItem from="1572010746816" duration="1906000" />
+      <workItem from="1572228058513" duration="679000" />
+      <workItem from="1572413602160" duration="2125000" />
+      <workItem from="1585836774411" duration="1086000" />
+      <workItem from="1586015028791" duration="1789000" />
+      <workItem from="1586493507337" duration="2692000" />
+      <workItem from="1586496222018" duration="1419000" />
+      <workItem from="1586503809237" duration="1204000" />
+      <workItem from="1587276933526" duration="345000" />
+      <workItem from="1587299463972" duration="8000" />
+      <workItem from="1588923170285" duration="1461000" />
+      <workItem from="1588927437255" duration="673000" />
+      <workItem from="1589033022346" duration="1647000" />
+      <workItem from="1589160188250" duration="98000" />
+      <workItem from="1591512890806" duration="1653000" />
+      <workItem from="1591600823357" duration="6729000" />
+      <workItem from="1592375689247" duration="1117000" />
+      <workItem from="1592624978168" duration="846000" />
+      <workItem from="1600239829727" duration="641000" />
     </task>
+    <task id="LOCAL-00001" summary="test rhea">
+      <created>1585837009398</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585837009398</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -77,44 +99,51 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test rhea" />
+    <option name="LAST_COMMIT_MESSAGE" value="test rhea" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="810" y="153" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600270394081">
-      <screen x="0" y="0" width="1920" height="1030" />
+    <state width="1345" height="135" key="GridCell.Tab.0.bottom" timestamp="1600240461834">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="810" y="153" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1030@0.0.1920.1030" timestamp="1600270394081" />
-    <state x="100" y="100" width="1702" height="828" key="DiffContextDialog" timestamp="1600270394446">
-      <screen x="0" y="0" width="1920" height="1030" />
+    <state width="1345" height="135" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600240461834" />
+    <state width="1345" height="135" key="GridCell.Tab.0.center" timestamp="1600240461833">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="100" y="100" width="1702" height="828" key="DiffContextDialog/0.0.1920.1030@0.0.1920.1030" timestamp="1600270394446" />
-    <state x="731" y="225" width="429" height="575" key="EnvironmentVariablesDialog" timestamp="1600270392910">
-      <screen x="0" y="0" width="1920" height="1030" />
+    <state width="1345" height="135" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1600240461833" />
+    <state width="1345" height="135" key="GridCell.Tab.0.left" timestamp="1600240461832">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="731" y="225" width="429" height="575" key="EnvironmentVariablesDialog/0.0.1920.1030@0.0.1920.1030" timestamp="1600270392910" />
-    <state width="1875" height="266" key="GridCell.Tab.0.bottom" timestamp="1600270518743">
-      <screen x="0" y="0" width="1920" height="1030" />
+    <state width="1345" height="135" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1600240461832" />
+    <state width="1345" height="135" key="GridCell.Tab.0.right" timestamp="1600240461834">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1875" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1030@0.0.1920.1030" timestamp="1600270518743" />
-    <state width="1875" height="266" key="GridCell.Tab.0.center" timestamp="1600270518743">
-      <screen x="0" y="0" width="1920" height="1030" />
-    </state>
-    <state width="1875" height="266" key="GridCell.Tab.0.center/0.0.1920.1030@0.0.1920.1030" timestamp="1600270518743" />
-    <state width="1875" height="266" key="GridCell.Tab.0.left" timestamp="1600270518743">
-      <screen x="0" y="0" width="1920" height="1030" />
-    </state>
-    <state width="1875" height="266" key="GridCell.Tab.0.left/0.0.1920.1030@0.0.1920.1030" timestamp="1600270518743" />
-    <state width="1875" height="266" key="GridCell.Tab.0.right" timestamp="1600270518743">
-      <screen x="0" y="0" width="1920" height="1030" />
-    </state>
-    <state width="1875" height="266" key="GridCell.Tab.0.right/0.0.1920.1030@0.0.1920.1030" timestamp="1600270518743" />
-    <state x="699" y="150" width="493" height="725" key="RollbackChangesDialog" timestamp="1600270287125">
-      <screen x="0" y="0" width="1920" height="1030" />
-    </state>
-    <state x="699" y="150" width="493" height="725" key="RollbackChangesDialog/0.0.1920.1030@0.0.1920.1030" timestamp="1600270287125" />
-    <state x="637" y="411" width="617" height="203" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600270231612">
-      <screen x="0" y="0" width="1920" height="1030" />
-    </state>
-    <state x="637" y="411" width="617" height="203" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1030@0.0.1920.1030" timestamp="1600270231612" />
+    <state width="1345" height="135" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600240461834" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>ctx.message.body</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
 </project>

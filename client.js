@@ -5,10 +5,10 @@ const _ = require('lodash');
 var args = {
     // hosts:['192.168.14.105'],
     // ports:[5672],
-    // hosts: ['amqp01.nr01.runsasoft.com','amqp01.nr01.runsasoft.com'],
-    // ports: [56233,56242],
-    hosts: ['47.110.224.59'],
-    ports: [61616]
+    hosts: ['amqp01.nr01.runsasoft.com','amqp01.nr01.runsasoft.com'],
+    ports: [56233,56242],
+    // hosts: ['47.110.224.59'],
+    // ports: [61616]
 };
 
 var sender;
@@ -43,7 +43,7 @@ connect_options.reconnect =function() {
 var connection = container.create_connection(connect_options);
 
 connection.on('connection_open', function (context) {
-    console.warn('connection_open OK');
+    console.warn('connection_open OK',context.connection.socket._peername);
     attempt = attempt % args.ports.length;
     successIndex = attempt;
 });
@@ -123,7 +123,7 @@ connection.on('disconnected', function (context) {
 });
 
 connection.connect();
-// addReceiver();
+addReceiver();
 addSender();
 
 // console.warn('test 15672-->fail, 5672-->success');

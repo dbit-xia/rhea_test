@@ -3,10 +3,11 @@ var container = require('runsa-rhea');
 const _ = require('lodash');
 
 var args = {
+    hosts:['127.0.0.1'],
     // hosts:['192.168.14.105'],
-    // ports:[5672],
-    hosts: ['amqp01.nr01.runsasoft.com','amqp01.nr01.runsasoft.com'],
-    ports: [56233,56242],
+    ports:[5672],
+    // hosts: ['amqp01.nr01.runsasoft.com','amqp01.nr01.runsasoft.com'],
+    // ports: [56233,56242],
     // hosts: ['47.110.224.59'],
     // ports: [61616]
 };
@@ -58,12 +59,20 @@ let receiver;
 function addReceiver(){
     if (receiver) return ;
     console.log('start open_receiver...');
-    receiver = connection.open_receiver('rwin_trade::rwin_trade-all');
+    receiver = connection.open_receiver({
+        source:{
+            address:'rwin_trade::rwin_trade-ec_service',
+            durable:true
+        },
+        
+    });
     receiver.on('receiver_open', () => {
         console.warn('receiver_open OK');  //not print this line
     });
     receiver.on('message',(ctx)=>{
-        console.log('收到消息',ctx.message);
+        // console.log('收到消息',ctx.message);
+        console.log('收到消息',Buffer.from(ctx.message.body.content).toString());
+        ctx.delivery.release({delivery_failed: true, undeliverable_here: false});
     })
 }
 function addSender(){
@@ -73,7 +82,7 @@ function addSender(){
         name: 'sender-' + Date.now(),
         autosettle: true, //必须设置为true,否则只能发送2048个消息
         target: {
-            address: 'rwin-trade',
+            address: '/exchange/rwin_trade',
             timeout: 2
         }, source: {timeout: 2}, timeout: 2
         // snd_settle_mode:0 //0:发送到MQ,即收到accepted事件,1:收不到accepted事件
@@ -84,7 +93,7 @@ function addSender(){
     sender.on('sendable', (ctx) => {
         sender.send({
             message_id:Date.now(), //header.messageID
-            application_properties: {"app":"test"},
+            application_properties: {"taskCount":"1"},
             message_annotations: {}, //{ "x-opt-delivery-delay": 1000 /*延时消息*/},
             body:JSON.stringify({a:123}),
             // delivery_count: 8,//未体现

@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.21",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.6",
     "rhea": "^1.0.20",
     "runsa-rhea": "^1.0.20"
   }
